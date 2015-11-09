@@ -31,5 +31,13 @@ function formSubmit() {
     var rate = data.rates[cur2];
     var convertedAmount = amount * rate;
     var results = document.getElementById('results');
+    var allData = document.getElementById('exchdata');
+    var newHtml = '<h3>Results:</h3><p>Data as of: ' + data.date + '</p><p>Exchange Rate: ' + rate + '</p>';
+    newHtml += '<p>' + amount + ' ' + data.base + ' = ' + convertedAmount + ' ' + cur2 + '</p>';
+    results.innerHTML = newHtml;
+    
+
+
+
   }
 }
