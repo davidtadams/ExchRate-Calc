@@ -14,8 +14,90 @@
       </p>
     </header>
     <main>
-
-
+      <section class="inputForm">
+        <h2>Pick your currencies to convert below</h2>
+        <form action="index.html" method="get">
+          <label for="inputAmount">Amount: </label>
+          <input id="inputAmount" type="number" name="amount" min="0" max="1000000" step="0.01" required autofocus>
+          <label for="currency1">Currency 1:</label>
+          <select name="Currency1" id="currency1">
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">PLN</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+          <label for="currency2">Currency 2:</label>
+          <select name="Currency2" id="currency2">
+            <option value="AUD">AUD</option>
+            <option value="BGN" selected>BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">PLN</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+          <input type="submit" name="submit" value="Calculate">
+        </form>
+      </section class="results">
+      <section>
+        This section will have the results of the currency conversion
+      </section>
+      <section class="exchData">
+        This section will show all the rates for the base rate chosen
+      </section>
     </main>
     <footer>
       <p>Add notes here on how old the exchange rate data is.</p>
