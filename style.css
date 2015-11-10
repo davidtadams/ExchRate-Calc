@@ -1,1 +1,47 @@
 /* All styling for Exchange Rate Calculator App */
+html {
+  position: relative;
+  min-height: 100%;
+  text-align: center;
+}
+
+body {
+  margin: 20px;
+  font-family: Helvetica;
+}
+
+header {
+  margin: 50px 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header p {
+  text-align: left;
+}
+
+section h2 {
+  text-align: center;
+}
+
+#results {
+  display: inline-block;
+  width: 40%;
+  margin-top: 30px;
+}
+
+#exchdata {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+footer {
+  margin: 50px 20px;
+  display: block;
+}
+
+form {
+  margin: 0 auto;
+}
