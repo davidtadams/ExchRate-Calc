@@ -108,28 +108,27 @@ function formSubmit() {
     var convertedAmount = amount * rate;
     var results = document.getElementById('results');
 
-    var newHtml = '<h3>Results:</h3><p>Data as of: '
-      + data.date + '</p><p>Exchange Rate: '
-      + rate + '</p>';
-    newHtml += '<p>' + amount + ' '
-      + data.base + ' = ' + convertedAmount + ' '
-      + cur2 + '</p>';
+    var newHtml = '<div><h3>Results</h3>';
+    newHtml += '<p>' + amount + ' ' + data.base
+        + ' = ' + convertedAmount + ' ' + cur2 + '</p>';
+    newHtml += '<p>Exchange Rate: ' + rate + '</p>';
+    newHtml += '<p>Data as of: ' + data.date + '</p></div>';
+
     results.innerHTML = newHtml;
   }
 
   function displayTable(data) {
     var allData = document.getElementById('exchdata');
-    var newHtml = '<table><tr><th>Currency Name</th><th>Abbreviation</th><th>1 '
-      + data.base + '</th><th>'
-      + data.base + ' (inverse)</th></tr>';
+    var newHtml = '<table><tr><th>Currency Name</th><th>Abbreviation</th>';
+    newHtml += '<th>1 '+ data.base + '</th>';
+    newHtml += '<th>' + data.base + ' (inverse)</th></tr>';
 
     for (var i = 0; i < currAbrev.length; i++) {
       if (data.rates[currAbrev[i]]) {
-        newHtml += '<tr><td>' + currName[currAbrev[i]]
-          + '</td><td>' + currAbrev[i]
-          + '</td><td>' + data.rates[currAbrev[i]]
-          + '</td><td>' + (1 / data.rates[currAbrev[i]]).toFixed(5)
-          + '</td></tr>';
+        newHtml += '<tr><td>' + currName[currAbrev[i]] + '</td>';
+        newHtml += '<td>' + currAbrev[i] + '</td>';
+        newHtml += '<td>' + data.rates[currAbrev[i]] + '</td>';
+        newHtml += '<td>' + (1 / data.rates[currAbrev[i]]).toFixed(5) + '</td></tr>';
       }
     }
 
