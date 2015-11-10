@@ -90,7 +90,12 @@ function formSubmit() {
 
   //ADD error handling for if they pick the same currency2
   if (cur1.toLowerCase() === cur2.toLowerCase()) {
-
+    var err = document.getElementsByClassName('error')[0];
+    err.innerText = 'Error, currencies cannot be the same';
+    return false;
+  } else {
+    var err = document.getElementsByClassName('error')[0];
+    err.innerText = '';
   }
 
   var req = new XMLHttpRequest();
@@ -135,4 +140,6 @@ function formSubmit() {
     newHtml += '</table>';
     allData.innerHTML = newHtml;
   }
+
+  return true;
 }
