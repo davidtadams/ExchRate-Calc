@@ -91,11 +91,11 @@ function formSubmit() {
   //ADD error handling for if they pick the same currency2
   if (cur1.toLowerCase() === cur2.toLowerCase()) {
     var err = document.getElementsByClassName('error')[0];
-    err.innerText = 'Error, currencies cannot be the same';
+    err.innerHTML = '<p>Error, currencies cannot be the same.</p>';
     return false;
   } else {
     var err = document.getElementsByClassName('error')[0];
-    err.innerText = '';
+    err.innerHTML = '';
   }
 
   var req = new XMLHttpRequest();
@@ -103,6 +103,9 @@ function formSubmit() {
     if (this.readyState === 4 && this.status === 200) {
       displayResults(JSON.parse(this.responseText));
       displayTable(JSON.parse(this.responseText));
+      document.getElementById('results').scrollIntoView({block: "end", behavior: "smooth"});
+      console.log(document.getElementsByClassName('backToTop')[0]);
+      document.getElementsByClassName('backToTop')[0].innerHTML = '<a href="#">Back to Top</a>';
     }
   };
   req.open('GET', url);
