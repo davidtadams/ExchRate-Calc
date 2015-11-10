@@ -88,6 +88,11 @@ function formSubmit() {
   var cur2 = document.getElementById('currency2').value;
   var url = 'https://api.fixer.io/latest?base=' + cur1;
 
+  //ADD error handling for if they pick the same currency2
+  if (cur1.toLowerCase() === cur2.toLowerCase()) {
+
+  }
+
   var req = new XMLHttpRequest();
   req.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
