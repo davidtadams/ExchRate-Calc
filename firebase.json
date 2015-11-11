@@ -1,0 +1,10 @@
+{
+  "firebase": "exchrate-calc",
+  "public": "./",
+  "ignore": [
+    "firebase.json",
+    "*.md",
+    ".gitignore",
+    ".git/"
+  ]
+}
